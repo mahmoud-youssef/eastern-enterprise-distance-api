@@ -1,0 +1,8 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+api_endpoints:
+  path: /api/calculateDistance
+  controller: App\Controller\ApiController::calculateDistance
+  methods: GET
