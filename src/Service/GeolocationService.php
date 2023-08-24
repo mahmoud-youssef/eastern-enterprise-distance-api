@@ -98,7 +98,8 @@ class GeolocationService
             $string = implode("", $record);
             $array = explode(' - ', $string);
             $namesArray[$array[0]] = $array[1];
-            
+            // we can use the Patch request to make it with batter performance but the Patch is expensive 
+            //Batch Requests Available on: Professional Plan and higher
             $response = $this->apiService->sendRequest('GET', $hostUrl . "?access_key=".$accessKey. "&query=".$array[1]);
             $responseStatusCode = $response->getStatusCode();
 
